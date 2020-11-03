@@ -1,0 +1,30 @@
+{
+  "name": "anonymously-api",
+  "version": "1.0.0",
+  "description": "An API for anonymously app",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev" : "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hemsleek/Anonymously-API.git"
+  },
+  "keywords": [
+    "javascript",
+    "anonymously",
+    "post",
+    "user",
+    "link"
+  ],
+  "author": "Asiyanbi Mubashir <asiyanbimubashir@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hemsleek/Anonymously-API/issues"
+  },
+  "homepage": "https://github.com/Hemsleek/Anonymously-API#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
