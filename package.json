@@ -2,10 +2,13 @@
   "name": "anonymously-api",
   "version": "1.0.0",
   "description": "An API for anonymously app",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev" : "nodemon src/index.js"
+    "start": "node dist",
+    "dev": "nodemon --exec babel-node src",
+    "lint": "./node_modules/.bin/eslint .",
+    "lint:fix":"./node_modules/.bin/eslint . --fix",
+    "build": "npm run lint:fix && babel src -d dist"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,22 @@
   },
   "homepage": "https://github.com/Hemsleek/Anonymously-API#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.11",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.1",
+    "eslint": "^7.12.1",
+    "eslint-config-standard": "^16.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "nodemon": "^2.0.6"
   }
 }
