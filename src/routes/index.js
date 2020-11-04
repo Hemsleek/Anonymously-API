@@ -1,7 +1,7 @@
 import { Router } from 'express'
-
+import { signup } from '../services'
 const router = Router()
 
-router.get('/signup', (req, res) => res.json({ message: 'it works' }))
+router.post('/signup', signup)
 
 export default router
